@@ -21,3 +21,10 @@ Edit variables for:
 * FVP Username
 * List of VMs
 * Path to password file that you're going to use for authentcation
+* NumWBPeers (0-2) and NumWBExternalPeers (if using fault domains)
+
+## TODO
+
+* Get VMs in write back from FVP cluster
+** Transition these VMs to write through
+** Verify state changes
