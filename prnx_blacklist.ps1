@@ -40,13 +40,13 @@ Catch {
           exit 1
     }
 
-#Loop through the list of VMs and set each to be blacklisted, wait 30 seconds then add them back to cluster in WB
+#Loop through the list of VMs and set each to be blacklisted, wait 10 seconds then add them back to cluster in WB
 foreach ($vm in $vms)
 {
      write-host "Blacklisting $vm to invalidate cache"
      Set-PrnxProperty $vm -Name cachePolicy –value 1
      Start-Sleep -seconds 10
-     write-host “Adding $vm back to FVP cluster in write back"
+     write-host "Adding $vm back to FVP cluster in write back"
      Set-PrnxProperty $vm -Name cachePolicy -value 3
      Set-PrnxAccelerationPolicy -WaitTimeSeconds 30 -name $vm -WB -NumWBPeers 1 -NumWBExternalPeers 0
 }
