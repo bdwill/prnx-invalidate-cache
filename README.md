@@ -26,5 +26,5 @@ Edit variables for:
 ## TODO
 
 * Get VMs in write back from FVP cluster
-** Transition these VMs to write through
-** Verify state changes
+* Transition these VMs to write through
+* Verify state changes
